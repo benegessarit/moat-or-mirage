@@ -2,11 +2,31 @@
 
 Evaluate whether a company's defensibility is real or dissolves when anyone can build software.
 
+A [Claude Code skill](https://code.claude.com/docs/en/skills) that implements the [Reality's Moat](https://davidbeyer.xyz/writing/realitys-moat) framework.
+
+## Install
+
+### Claude Code (recommended)
+
+```bash
+# Personal — available across all your projects
+cp -r moat-or-mirage ~/.claude/skills/moat-or-mirage
+
+# Or project — available to your team via version control
+cp -r moat-or-mirage .claude/skills/moat-or-mirage
+```
+
+Then invoke with `/moat-or-mirage` or let Claude load it when you ask about defensibility.
+
+### Any LLM
+
+Copy the contents of [`SKILL.md`](SKILL.md) and [`references/framework.md`](references/framework.md) into your system prompt or conversation.
+
 ## The Framework
 
 When code costs nothing, the only defensible advantage is **scar tissue** — operational knowledge earned in a shifting system where the current state isn't self-explanatory.
 
-The prompt scores companies across 7 dimensions:
+The skill scores companies across 7 dimensions:
 
 | # | Dimension | What it measures |
 |---|---|---|
@@ -20,18 +40,16 @@ The prompt scores companies across 7 dimensions:
 
 ## Usage
 
-Copy [`prompt.md`](prompt.md) into any LLM conversation as a system prompt or prefix. Then paste a company memo, pitch deck summary, or description.
+```
+/moat-or-mirage [paste memo or company description + URL]
+```
 
-The prompt will:
+The skill will:
 1. **Extract** company details and claimed advantages
 2. **Research** evidence for/against each dimension
 3. **Dissolve** advantages that don't survive free code
 4. **Score** all 7 dimensions with evidence-backed ratings
 5. **Synthesize** a scorecard, archetype match, and verdict
-
-## Example Input
-
-> Acme processes insurance claims for 200 mid-market carriers. Founded 2018. Claims their proprietary rules engine and dataset of 50M processed claims are key differentiators. https://acme.example.com
 
 ## What You Get
 
@@ -39,7 +57,18 @@ The prompt will:
 - 7-dimension scorecard with confidence ratings
 - Archetype comparison (Stripe, Chegg, Epic, etc.)
 - Temporal placement on the scar tissue accumulation curve
+- Unbundling assessment for incumbents, vertical AI assessment for startups
 - Three-paragraph verdict: what dissolved, what survives, the judgment
+
+## Structure
+
+```
+moat-or-mirage/
+├── SKILL.md                    # Main skill (workflow + rules)
+├── references/
+│   └── framework.md            # Scoring tables, archetypes, research questions
+└── README.md
+```
 
 ## License
 
