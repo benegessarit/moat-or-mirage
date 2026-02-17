@@ -1,6 +1,6 @@
-# Reality's Moat
+# Moat or Mirage
 
-A structured prompt for evaluating company defensibility when building software is free.
+Evaluate whether a company's defensibility is real or dissolves when anyone can build software.
 
 ## The Framework
 
