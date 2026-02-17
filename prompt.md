@@ -13,7 +13,11 @@ FLOW: EXTRACT → RESEARCH → DISSOLVE → SCORE → SYNTHESIZE
 
 When building software is free, the only defensible advantage is **scar tissue**: operational knowledge earned in a shifting system where the current state isn't self-explanatory.
 
-Every software product is a ratio: **scar tissue to specifiable code**. When code goes to zero, only scar tissue remains.
+Every software product is a ratio: **scar tissue to specifiable code**. When code goes to zero, only scar tissue remains. You didn't fail at building. You failed at knowing.
+
+### Why you can't simulate scar tissue
+
+"Throw a thousand AI agents at the problem" doesn't work. A simulation that actually works wouldn't be a simulation — it would be the system. To simulate is to operate. The bottleneck is time, not intelligence. You cannot learn next year's regulation this year. The learning rate is set by the speed of the world, not the speed of the agent.
 
 ---
 
@@ -110,6 +114,7 @@ Litmus test: "Can a well-funded newcomer reach parity by studying the current st
 | **SETTLED** | Same inputs → same outputs. Rules don't change. | Biology: "The same molecule hits the same receptor every time" |
 | **PERIODIC** | Rules change predictably. Adaptation doesn't reshape the surface. | Annual compliance updates with clear specs |
 | **SHIFTING** | Rules change AND each adaptation reshapes the surface the next change hits. | Payer reimbursement: "each adaptation reshapes the surface the next change hits" |
+| | | Cybersecurity: attackers adapt within hours, each defense reshapes the attack surface |
 
 Key distinction: A shifting system isn't just "things change." The company's own adaptations create new failure surfaces when the next change hits. System and company co-evolve.
 
@@ -137,7 +142,7 @@ The test: "AI can study anything, but it can't operate for you." Is this knowled
 | Score | Anchor | Example |
 |---|---|---|
 | **LINEAR** | More data, but each datapoint stands alone. | ML training: "You don't need to know what last year's training run looked like" |
-| **WIDTH** | Customer combinations surface non-obvious failure modes. | Hospital software: "700 hospitals produce nearly a quarter million pairwise interactions" |
+| **WIDTH** | Customer combinations surface non-obvious failure modes. | Hospital software: 700 hospitals → ~250,000 pairwise interactions. 50 hospitals → ~1,200. The gap is 200:1, not 14:1. |
 | **WIDTH × DEPTH** | Combinations AND history-dependent interpretation. Gap widens superlinearly. | Payments: "newcomer saw a parameter update. Stripe saw a cascade" |
 
 ---
@@ -224,6 +229,14 @@ Three paragraphs:
 2. **What survives** — real defensibility, cite dimensions
 3. **The judgment** — overall assessment + system replacement risk
 
+### 5. Unbundling Question
+
+If this company bundles code with operational knowledge (like Salesforce, Workday, ServiceNow): does the operational knowledge survive independently when anyone can rebuild the product in a weekend? Every bundled company is splitting apart — code goes to zero, only scar tissue remains.
+
+### 6. Vertical AI Assessment
+
+If this is a vertical AI company: are they picking a shifting system and operating within it, or just building software? The strongest vertical AI companies aren't software products — they're shared operational knowledge, packaged as services. Each customer workflow is a system action; each action generates scar tissue that compounds across all customers.
+
 Close with: *"The hardest judgment isn't whether the moat is real. It's whether the world is still shifting within the same system, or replacing it with a different one."*
 </phase>
 
@@ -234,3 +247,5 @@ CONSTRAINTS:
 - No evidence = LOW confidence = WEAK. No exceptions.
 - Everything dissolved? Say so first. Don't bury the lede.
 - D7 is the final word. Perfect D1-D6 means nothing if D7 is HIGH RISK.
+- "Can't they just throw AI agents at it?" → No. To simulate is to operate. Time is the bottleneck.
+- The scarce resource was never the ability to build. It was always the knowledge that only comes from operating in reality.
